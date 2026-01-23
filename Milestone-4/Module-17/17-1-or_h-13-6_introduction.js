@@ -81,7 +81,9 @@ console.log(Rich);
 var Dal = false;
 console.log(Dal);
 console.log(typeof Dal);
-console.log(typeof name)
+console.log(typeof name);
+var price = 555;
+console.log(typeof price);
 
 
 /* ১️⃣ Camel Case
