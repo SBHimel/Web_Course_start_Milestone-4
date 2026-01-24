@@ -10,3 +10,5 @@ console.log(peyara == apple);
 console.log(10 == "10")
 console.log(10 === "10")
 console.log(10 != 10);
+console.log(10 !== 10);
+console.log(10 !== '10');
