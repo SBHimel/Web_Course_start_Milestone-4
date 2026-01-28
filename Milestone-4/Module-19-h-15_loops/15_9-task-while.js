@@ -34,10 +34,10 @@ let summ = 0;
 let jj = 81;
 while(jj <= 131){
     if(jj % 2 === 0){
-        jj++;          // increment before continue
+        jj++; 
         continue;
     }
     summ = summ + jj;
     console.log("odd", summ);
-    jj++;              // increment for odd number
+    jj++;  
 }
