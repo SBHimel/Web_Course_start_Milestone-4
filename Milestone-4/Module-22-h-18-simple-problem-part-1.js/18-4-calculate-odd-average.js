@@ -3,6 +3,8 @@
 * give me the average of the odd numbers in the array
 */
 
+/* “একটি সংখ্যার array দেওয়া আছে। array থেকে বিজোড় (odd) সংখ্যাগুলো বের করে তাদের গড় (average) নির্ণয় করার জন্য একটি function লেখো।”
+ */
 function oddAverage(numbers) {
     const odds = [];
     for (const number of numbers) {
