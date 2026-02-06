@@ -18,3 +18,11 @@ function noDuplicate(array) {
 }
 const uniqueArray = noDuplicate(biriyanikhor);
 console.log(uniqueArray);
+/* 
+bekkha: 
+includes() → আছে নাকি নাই
+
+=== false → নাই
+
+নাই হলে → ঢুকাও
+*/
