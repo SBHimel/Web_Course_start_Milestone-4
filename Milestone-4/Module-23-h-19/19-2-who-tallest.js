@@ -16,6 +16,7 @@ console.log("max value is", max); // print
 
 
 // -----------------sohoje-----------------
+
 const heightss = [65, 66, 68, 72, 75, 60, 99];
 
 // spread operator (...) দিয়ে array কে আলাদা আলাদা arguments হিসেবে পাঠানো হচ্ছে Math.max-এ
