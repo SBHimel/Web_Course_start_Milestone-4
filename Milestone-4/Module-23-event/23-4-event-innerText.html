@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+
+<body>
+    <h1 id="page-title">Event Handler</h1>
+    <button id="btn-ubdate-title">Update title</button><br><br><br>
+
+    <!-- handle input text -->
+
+    <p id="name">No Name</p>
+
+    <input id="input-name" placeholder="Your Name" type="text">
+
+    <button id="btn-update">update</button>
+
+    <script>
+        // step 1: add click event to button
+        document.getElementById('btn-update')
+            .addEventListener('click', function () {
+
+                // step 2: get input element
+                const nameInput = document.getElementById('input-name');
+
+                // step 3: get input value
+                const name = nameInput.value;
+
+                // step 4: select paragraph
+                const nameP = document.getElementById('name');
+
+                // step 5: set text
+                nameP.innerText = name;
+
+            });
+    </script>
+
+    <script src="js/23-4-event-innerText.js"></script>
+</body>
+
+</html>
