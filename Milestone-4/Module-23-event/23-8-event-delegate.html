@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+
+<body>
+    <h1>Explore Event Delegation</h1>
+
+<ol id="item-list">
+    <li class="item">My Awesome Item - 1</li>
+    <li class="item">My Awesome Item - 2</li>
+    <li class="item">My Awesome Item - 3</li>
+    <li class="item">My Awesome Item - 4</li>
+    <li class="item">My Awesome Item - 5</li>
+    <li class="item">My Awesome Item - 6</li>
+</ol>
+
+<button id="btn-add-item">Add new item</button>
+
+<script>
+    const itemList = document.getElementById('item-list');
+
+    // ✅ Event Delegation: remove li on click
+    itemList.addEventListener('click', function(event){
+        if(event.target.tagName === 'LI'){  
+            event.target.remove();           // delete clicked item
+        }
+    });
+
+    // ✅ Add new item + change color + background
+    document.getElementById('btn-add-item').addEventListener('click', function(){
+        // 1️⃣ create new li
+        const li = document.createElement('li');
+        li.classList.add('item');
+        li.innerText = 'Brand new item added';
+        itemList.appendChild(li);   // add to ol
+
+        // 2️⃣ change color of all li
+        const allLi = itemList.querySelectorAll('li');
+        allLi.forEach(function(li){
+            li.style.color = 'maroon';  
+        });
+
+        // 3️⃣ change background color of page
+        document.body.style.backgroundColor = 'lightgreen';
+    });
+</script>
+</script>
+</body>
+
+</html>
