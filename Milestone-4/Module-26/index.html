@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Job Application Tracker</title>
+
+  <link rel="shortcut icon" href="B13-A4-PH-Job-Tracker/download.png" type="image/x-icon">
+
+  <!-------- tailwind+daisy -------------->
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!----------------- font ---------------->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: "Geist", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base-200 min-h-screen">
+
+  <!-- Main container -->
+  <div class="max-w-6xl mx-auto p-4">
+
+    <!-- Website Title -->
+    <h1 class="text-2xl font-bold mb-6">
+      Job Application Tracker
+    </h1>
+
+    <!-- ================= DASHBOARD SECTION ================= -->
+    <!-- This section shows total, interview and rejected count -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+      <!-- Total Card -->
+      <div class="card bg-base-100 shadow">
+        <div class="card-body">
+          <h2 class="text-sm text-gray-500">Total</h2>
+          <!-- JS will update this number -->
+          <p id="totalCount" class="text-2xl font-bold">0</p>
+        </div>
+      </div>
+
+      <!-- Interview Card -->
+      <div class="card bg-base-100 shadow">
+        <div class="card-body">
+          <h2 class="text-sm text-gray-500">Interview</h2>
+          <p id="interviewCount" class="text-2xl font-bold text-green-600">0</p>
+        </div>
+      </div>
+
+      <!-- Rejected Card -->
+      <div class="card bg-base-100 shadow">
+        <div class="card-body">
+          <h2 class="text-sm text-gray-500">Rejected</h2>
+          <p id="rejectedCount" class="text-2xl font-bold text-red-600">0</p>
+        </div>
+      </div>
+
+    </div>
+    <!-- ================= END DASHBOARD ================= -->
+
+
+    <!-- Available Jobs Title + Count -->
+    <div class="flex justify-between items-center mb-3">
+      <h2 class="text-lg font-semibold">Available Jobs</h2>
+
+      <!-- This count will change depending on tab -->
+      <p id="tabJobCount" class="text-sm text-gray-500">0 jobs</p>
+    </div>
+
+
+    <!-- ================= TAB BUTTONS ================= -->
+    <div class="mb-6">
+      <!-- data-tab attribute will help us filter -->
+      <button class="btn btn-sm btn-primary tab-btn" data-tab="all">All</button>
+      <button class="btn btn-sm tab-btn" data-tab="interview">Interview</button>
+      <button class="btn btn-sm tab-btn" data-tab="rejected">Rejected</button>
+    </div>
+
+
+    <!-- ================= JOBS CONTAINER ================= -->
+    <!-- All cards will be generated using JS -->
+    <div id="jobsContainer" class="space-y-4"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
