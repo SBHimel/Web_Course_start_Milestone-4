@@ -1,83 +1,121 @@
-## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
+1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
+<!-- getElementById -->
+Ans:_________
+
+This is used to get the element with a specific id. Works only on one element
+
+example:
+
+HTML:
+<h1 id = "title">Hello Himel </h1>
+
+JS:
+const element = document.getElementById('title')
 
 
----
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
+<!-- getElementsByClassName -->
+
+It fetches all elements that fall within the specified class
+
+--------------example :
+html--->
+<div class="box">Box 1</div>
+<div class="box">Box 2</div>
+JS:--->
+const elements = document.getElementsByClassName('box');
 
 
-# Main Requirements
+<!---============= querySelector =========-->
 
-## Design Part
-
-## Dashboard
-- Website name and Create a dashboard like figma 
-- The section should be responsive for mobile devices. It is totally up to you. 
-
-## Available Jobs Section
-- A title on the left side, jobs count on the right side 
-- 3 different tab  below the section title 
-- Minimum 8 cards with:
-	- companyName
-	- position
-	- location
-	- type
-	- salary
-	- description
-	- 2 buttons: Interview, Rejected
-- By default all the jobs data will show on All tab, and the Interview, Rejected tab will show “No jobs Available” message with a subtitle below and an icon/image on the above
-
-- The section should be responsive for mobile devices. It is totally up to you.
-
---- 
-
-## Functionalities Part
-- Clicking on Interview button on the card 
-    - will add the data on Interview tab 
-    - add the status as Interview.
-    - Will increase the the count of interview in Dashboard 
-
-- Clicking on Rejected button on the card 
-    - will add the data on Rejected tab 
-    - add the status as Rejected.
-    - Will increase the the count of Rejected in Dashboard
-
-- Enable toggle between Interview and rejected button(you can select Rejected button after clicking on Interview, and Interview button after clicking on Rejected button). It will change the tab and dashboard count also. It will show tab wise jobs count on the right.
-
----
-
-# Challenges Requirements
-- Clicking on the delete button will remove that card from the UI, and the count will be deducted from the dashboard card and the main section.
-- No lorem ipsum text on your website. At least 8 meaningful commits in your project.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
+Ans:_________
+This is used to get the first matching element.
+--------------example :
+html--->
+<p class="text">Hello</p>
+<p class="text">World</p>
+JS:--->
+const firstText = document.querySelector('.text');
 
 
-## Answers to Questions
+<!--============= querySelectorAll======= -->
 
-### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+Ans:_________
 
-### 2. How do you create and insert a new element into the DOM?
-
-### 3. What is Event Bubbling? And how does it work?
-
-### 4. What is Event Delegation in JavaScript? Why is it useful?
-
-### 5. What is the difference between preventDefault() and stopPropagation() methods?
-
----
+Using this, all matching elements are found.
+html--->
+<p class="text">Hello</p>
+<p class="text">World</p>
+JS:--->
+const allText = document.querySelectorAll('.text');
 
 
-**Technology Stack:**
-- HTML
-- CSS (Vanilla/Tailwind/DaisyUI)
-- JavaScript (Vanilla)
+2. How do you create and insert a new element into the DOM?
 
 
---- 
+Ans:_________
 
-## What to submit: 
+JS:--->
+1/ Crating a new element
+const newDiv = document.createElement('div');
 
-1. GitHub Repository Link: 
-2. Live Site Link: 
+2/Adding content or attributes to an element
+newDiv.textContent = "Hello Himel";
+
+3/ Adding DOM elements
+document.body.appendChild(newDiv); 
+
+
+3. What is Event Bubbling? And how does it work?
+Ans:_________
+the events goes from the child element to the parent element
+
+html--->
+<div id="parent">
+  <button id="btn">Click Me</button>
+</div>
+
+JS:--->
+
+btn.addEventListener('click', function()  {
+  alert("Button clicked");
+});
+
+parent.addEventListener('click', function () {
+  alert("Parent clicked");
+});
+
+
+4. What is Event Delegation in JavaScript? Why is it useful?
+
+Ans:_________
+Event Delegation is handling the event of a child element with this event listener. don't have to procide a separate listener for the child element.
+
+html--->
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+JS:--->
+list.addEventListener('click', function(e) {
+  if(e.target.tagName === 'LI') {
+    alert(e.target.textContent + " clicked");
+  }
+});
+
+
+5. What is the difference between preventDefault() and stopPropagation() methods?
+Ans:_________
+preventDefault() ==>  Disables the event's dafault action
+stopPropagation() ==> Stops spreading to tthe event's parent .
+
+html--->
+<a href="https://google.com" id="link">Go</a>
+<button id="btn">Click</button>
+<div id="parent"></div>
+
+JS:--->
+// preventDefault
+link.addEventListener('click', e => e.preventDefault());
+// stopPropagation
+btn.addEventListener('click', e => e.stopPropagation());

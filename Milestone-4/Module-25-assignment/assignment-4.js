@@ -14,10 +14,10 @@ const jobsContainer = document.getElementById("jobsContainer");
 const totalCount = document.getElementById("totalCount");
 const interviewCount = document.getElementById("interviewCount");
 const rejectedCount = document.getElementById("rejectedCount");
-const tabJobCount = document.getElementById("tabJobCount");
+const jobCount = document.getElementById("jobCount");
 
 
-// ================= COUNT FUNCTION =================
+// ----------------  Count function -----------
 
 function updateCounts() {
 
@@ -37,13 +37,13 @@ function updateCounts() {
     rejectedCount.innerText = rejected;
 
     if (currentTab === "all") {
-        tabJobCount.innerText = total + " jobs";
+        jobCount.innerText = total + " jobs";
     }
     else if (currentTab === "interview") {
-        tabJobCount.innerText = interview + " of " + total + " jobs";
+        jobCount.innerText = interview + " of " + total + " jobs";
     }
     else if (currentTab === "rejected") {
-        tabJobCount.innerText = rejected + " of " + total + " jobs";
+        jobCount.innerText = rejected + " of " + total + " jobs";
         console.log(rejected, total);
     }
 
@@ -75,19 +75,16 @@ function updateCounts() {
     }
 }
 
-// ================= TAB FILTER =================
+//-------------- Filter ----------------
 
 document.querySelectorAll(".tab-btn").forEach(button => {
     button.addEventListener("click", function () {
-
         document.querySelectorAll(".tab-btn").forEach(btn => {
             btn.classList.remove("bg-black", "text-white");
             btn.classList.add("bg-gray-300", "text-black");
         });
-
         this.classList.remove("bg-gray-300", "text-black");
         this.classList.add("bg-black", "text-white");
-
         currentTab = this.dataset.tab;
 
         filterJobs();
@@ -123,7 +120,9 @@ function filterJobs() {
 }
 
 
-// ================= EVENT DELEGATION =================
+// ------------- event-------------
+// ------------- event-------------
+// ------------- event-------------
 
 jobsContainer.addEventListener("click", function (e) {
 
@@ -137,7 +136,7 @@ jobsContainer.addEventListener("click", function (e) {
 if (e.target.classList.contains("interview-btn")) {
 
     if (card.classList.contains("interview")) {
-        // remove interview → back to Not Applied
+        // remove interview --> Not Applied
         card.classList.remove("interview");
         const index = interviewList.indexOf(card);
         if (index !== -1) interviewList.splice(index, 1);
@@ -188,7 +187,8 @@ if (e.target.classList.contains("rejected-btn")) {
 
         if (!rejectedList.includes(card)) rejectedList.push(card);
 
-        // ✅ Show REJECTED button
+        // show Rejected button
+
         card.querySelector(".status").innerHTML =
             `<button class="btn btn-sm rounded-full font-semibold text-white bg-red-500 shadow-md hover:bg-red-600 transition-colors duration-300 text-[10px] whitespace-nowrap">
                 REJECTED
@@ -196,22 +196,27 @@ if (e.target.classList.contains("rejected-btn")) {
     }
 }
 
-    // ----------------Delete 
+    // ----------------Delete--------- 
+    // ----------------Delete--------- 
 
-    if (e.target.classList.contains("delete-btn")) {
+    // ----------------Delete---------
 
-        const interviewIndex = interviewList.indexOf(card);
-        if (interviewIndex !== -1) {
-            interviewList.splice(interviewIndex, 1);
-        }
+const deleteBtn = e.target.closest(".delete-btn");
 
-        const rejectedIndex = rejectedList.indexOf(card);
-        if (rejectedIndex !== -1) {
-            rejectedList.splice(rejectedIndex, 1);
-        }
+if (deleteBtn) {
 
-        card.remove();
+    const interviewIndex = interviewList.indexOf(card);
+    if (interviewIndex !== -1) {
+        interviewList.splice(interviewIndex, 1);
     }
+
+    const rejectedIndex = rejectedList.indexOf(card);
+    if (rejectedIndex !== -1) {
+        rejectedList.splice(rejectedIndex, 1);
+    }
+
+    card.remove();
+}
 
     filterJobs();
     updateCounts();
