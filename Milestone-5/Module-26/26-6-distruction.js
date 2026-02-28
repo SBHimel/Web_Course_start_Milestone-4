@@ -19,3 +19,11 @@ console.log(first, second);
 
 // const [height, weight] = numbers
 
+// 🟢 Task:
+const numbers = [5, 10, 15, 20, 25];
+
+const [fir, sec, ...rest] = numbers;
+
+console.log(fir);   // 5
+console.log(sec);  // 10
+console.log(rest);    // [15, 20, 25]
