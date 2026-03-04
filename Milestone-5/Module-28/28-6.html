@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #post-container{
+            max-width: 1160px;
+            margin: 50 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .post-card{
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px grey;
+            height: 100%;
+        }
+        .post-card p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="loadPosts2()">Load Posts 2</button><br><br>
+
+    <h1>All Posts</h1>
+    <div id="post-container">
+        <div class="post-card">
+            <h2>This is a Sample Title </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus asperiores ipsam excepturi repellendus at cum rerum maxime doloribus magni? Omnis, voluptates? Dignissimos, debitis! Laudantium qui earum sint laborum, optio id.
+
+            </p>
+        </div>
+    </div>
+
+    <script src="28-6.js"></script>
+</body>
+</html>
