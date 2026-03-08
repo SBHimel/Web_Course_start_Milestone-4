@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment-5</title>
+    <link rel="shortcut icon" href="B13-A5-Github-Issue-Tracker/assets/github.jpg" type="image/x-icon">
+
+    <!-- tailwind+daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gray-200 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+
+        <div class="text-center mb-5">
+
+            <img src="B13-A5-Github-Issue-Tracker/assets/github-logo.png" class="w-14 mx-auto">
+
+            <h2 class="text-xl text-black font-bold mt-2">GitHub Issues Tracker</h2>
+
+            <p class="text-sm text-gray-500 ">Sign in to manage your issues</p>
+
+        </div>
+
+        <label class="label">Username</label>
+        <input id="username" type="text" placeholder="Enter Username" class="input input-bordered w-full">
+
+        <p class="text-xs text-purple-600">Default: admin</p>
+
+        <label class="label mt-3">Password</label>
+        <input id="password" type="password" placeholder="Enter Password" class="input input-bordered w-full">
+
+        <p class="text-xs text-purple-600">Default: admin123</p>
+
+        <button onclick="login()" class="btn btn-primary w-full mt-4 bg-[#4A00FF] text-white">
+            Sign In
+        </button>
+
+        <div class="divider">OR</div>
+
+        <div class="bg-gray-100 p-3 rounded text-sm text-center">
+            <p>Username: admin</p>
+            <p>Password: admin123</p>
+        </div>
+    </div>
+
+
+    <script src="script-for-assign.js"></script>
+
+</body>
+
+</html>

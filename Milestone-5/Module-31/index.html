@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5 Home</title>
+    <link rel="shortcut icon" href="B13-A5-Github-Issue-Tracker/assets/github.jpg" type="image/x-icon">
+
+    <!-- font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind+daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-base-300">
+
+    <!-- Navbar -->
+
+    <div class="navbar bg-white shadow px-6 flex justify-between max-w-[80%] mx-auto rounded-xl">
+
+        <div class="flex justify-center lg:flex-1 lg:justify-start">
+            <a class="btn btn-ghost text-xl"><i class="fa-brands fa-github text-3xl"></i>GitHub Issues Tracker</a>
+        </div>
+
+        <div class="flex gap-2">
+
+            <input id="searchInput" type="text" placeholder="Search issues" class="input input-bordered">
+
+            <button onclick="searchIssue()" class="btn btn-primary">
+                Search
+            </button>
+        </div>
+
+    </div><br>
+
+
+
+    <!-- ========= All Issue ======= -->
+    <!-- Tabs -->
+    <div class="max-w-[80%] mx-auto rounded-xl">
+        <div class="mb-5">
+            <h2 class="text-3xl font-semibold">All Issues</h2>
+        </div>
+        <!-- ======== all opem close ======== -->
+        <div class="mb-6">
+            <button onclick="filterIssues('all', this)" class="tab-btn btn btn-sm btn-primary text-white">
+                All
+            </button>
+
+            <button onclick="filterIssues('open', this)" class="tab-btn btn btn-sm text-black">
+                Open
+            </button>
+
+            <button onclick="filterIssues('closed', this)" class="tab-btn btn btn-sm text-black">
+                Closed
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ======= counting Issue ====== -->
+    <div class="navbar bg-base-100 shadow-sm max-w-[80%] mx-auto bg-[#ffffff] rounded-xl mb-16">
+        <div class="flex-1">
+            <div class="flex gap-1">
+                <img src="B13-A5-Github-Issue-Tracker/assets/Aperture.png" alt="" class="p-2">
+                <div class="">
+                    <!-- counting kora hobe h1 e -->
+                    <h1 id="issueCount" class="font-bold">50 Issues</h1>
+                    <p class="text-gray-500">Track and manage your project issues</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li>
+                    <p><span class="inline-block w-4 h-4 bg-[#319324] rounded-full mr-2"></span>Open</p>
+                </li>
+
+                <li><a><span class="inline-block w-4 h-4 bg-purple-500 rounded-full mr-2"></span>Closed</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--  ======= all card gula ===== -->
+
+    <section id="issuesContainer"
+        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-8 ">
+
+        <!-- <div class="card bg-base-100 shadow-md border w-80 h-80"> -->
+
+        <!-- <div class="card-body"> -->
+
+        <!-- Header -->
+        <!-- <div class="flex justify-between items-start">
+                        <div>
+                            <img src="B13-A5-Github-Issue-Tracker/assets/Open-Status.png" alt="">
+                        </div>
+
+                        <div class="badge badge-error badge-outline text-[#EF4444] font-semibold bg-[#FECACA]">
+                            HIGH
+                        </div>
+                    </div> -->
+
+        <!-- Title -->
+        <!-- <h2 class="card-title text-lg font-bold">
+                        Fix Navigation Menu On Mobile Devices
+                    </h2> -->
+
+        <!-- Description -->
+        <!-- <p class="text-gray-500 text-sm">
+                        The navigation menu doesn't collapse properly on mobile devices...
+                    </p> -->
+
+        <!-- Tags -->
+        <!-- <div class="flex gap-2 mt-2">
+                        <div class="badge badge-error badge-outline bg-[#FECACA] text-[#EF4444]">🐞 BUG</div>
+                        <div class="badge badge-warning badge-outline bg-[#FDE68A] text-[#D97706]">HELP WANTED</div>
+                    </div> -->
+
+        <!-- Footer -->
+        <!-- <div class="border-t pt-3 mt-3 text-sm text-gray-500">
+                        <p>#1 by john_doe</p>
+                        <p>1/15/2024</p>
+                    </div> -->
+
+        <!-- </div> -->
+
+        <!-- </div> -->
+
+    </section>
+
+    <!-- =========== Modal =============== -->
+
+    <section class="">
+        <!-- Open Modal Button -->
+        <!-- <button class="btn btn-primary" onclick="loadModal(1)">//
+            Open Issue
+        </button> -->
+
+        <!-- এখানে 1 হচ্ছে issue id। পরে card থেকে dynamically দিবে: onclick="loadModal(${issue.id})" -->
+
+
+        <!-- Modal -->
+        <dialog id="issuesModal" class="modal">
+            <!-- <div class="modal-box max-w-2xl"> -->
+
+            <!-- Title -->
+            <!-- <h2 class="text-2xl font-bold">Fix broken image uploads</h2> -->
+
+            <!-- Info -->
+            <!-- <div class="text-sm text-gray-500 mt-2 flex gap-2">
+                    <span class="badge badge-success badge-sm">Opened</span>
+                    <span>Opened by Fahim Ahmed</span>
+                    <span>•</span>
+                    <span>22/02/2026</span>
+                </div> -->
+
+            <!-- Labels -->
+            <!-- <div class="flex gap-2 mt-4">
+                    <span class="badge bg-red-100 text-red-600">BUG</span>
+                    <span class="badge bg-yellow-100 text-yellow-700">HELP WANTED</span>
+                </div> -->
+
+            <!-- Description -->
+            <!-- <p class="mt-4 text-gray-600">
+                    The navigation menu doesn't collapse properly on mobile devices.
+                    Need to fix the responsive behavior.
+                </p> -->
+
+            <!-- Bottom Info -->
+            <!-- <div class="bg-gray-100 p-4 rounded-lg mt-5 flex justify-between">
+
+                    <div>
+                        <p class="text-sm text-gray-500">Assignee:</p>
+                        <p class="font-semibold">Fahim Ahmed</p>
+                    </div>
+
+                    <div>
+                        <p class="text-sm text-gray-500">Priority:</p>
+                        <span class="badge badge-error">HIGH</span>
+                    </div>
+
+                </div> -->
+
+            <!-- Close Button -->
+            <!-- <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn btn-primary">Close</button>
+                    </form>
+                </div> -->
+
+            </div>
+        </dialog>
+
+    </section>
+
+    <!--========== Load spenning ============ -->
+    <div id="loadingSpinner" class="h-[60vh] flex hidden justify-center items-center">
+        <span class="loading loading-dots loading-xl"></span>
+    </div>
+
+    <script src="script-for-assign.js"></script>
+</body>
+
+</html>
