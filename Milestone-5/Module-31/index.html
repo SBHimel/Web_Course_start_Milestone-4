@@ -32,9 +32,11 @@
 
         <div class="flex gap-2">
 
-            <input id="searchInput" type="text" placeholder="Search issues" class="input input-bordered">
+            <input id="searchInput" type="text" placeholder="Search issues" class="input input-bordered"
+            oninput="searchIssues()"> 
+            <!-- // oninput er karne typing obosthatei searching hote thakbe -->
 
-            <button onclick="searchIssue()" class="btn btn-primary">
+            <button onclick="searchIssues()" class="btn btn-primary">
                 Search
             </button>
         </div>
