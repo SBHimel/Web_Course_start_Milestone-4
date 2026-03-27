@@ -1,0 +1,28 @@
+.country {
+    border: 2px solid salmon;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.country-visited{
+    background-color: aquamarine;
+}
+
+.btn {
+  background-color: #4c8caf; /* green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 2px;
+}
+
+/* hover effect */
+.btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
