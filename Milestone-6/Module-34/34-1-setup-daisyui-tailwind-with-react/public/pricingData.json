@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": "$1000/month",
+    "description": "Start your fitness journey with the essentials you need.",
+    "features": [
+      "Access to gym equipment",
+      "Locker facility",
+      "1 group class per week",
+      "Basic trainer support",
+      "Warm-up & stretching area",
+      "Drinking water facility"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Standard",
+    "price": "$2000/month",
+    "popular": "true",
+    "description": "Take your fitness to the next level with more flexibility and support.",
+    "features": [
+      "Unlimited group classes",
+      "Cardio & strength training",
+      "Free diet chart",
+      "Trainer guidance",
+      "Body composition analysis",
+      "Access to all workout zones",
+      "2 personal training sessions per month"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium",
+    "price": "$3500/month",
+    "description": "Achieve peak performance with full support and premium सुविधाएँ.",
+    "features": [
+      "Personal trainer",
+      "Custom workout plan",
+      "Nutrition consultation",
+      "Steam & sauna access",
+      "Priority support",
+      "24/7 gym access",
+      "Private locker",
+      "Weekly progress tracking",
+      "Supplement guidance"
+    ]
+  }
+]
