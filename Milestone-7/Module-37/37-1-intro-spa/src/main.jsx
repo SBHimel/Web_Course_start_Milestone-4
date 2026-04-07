@@ -18,16 +18,16 @@ const usersPromise = fetch('https://jsonplaceholder.typicode.com/users').then(re
 
 const router = createBrowserRouter([
   {
-    path:'/',
+    path: '/',
     Component: Root,
-    children:[
-      {index: true, Component: Home},
-      {path: 'mobiles', Component: Mobiles},
-      {path: 'laptops', Component: Laptops},
+    children: [
+      { index: true, Component: Home },
+      { path: 'mobiles', Component: Mobiles },
+      { path: 'laptops', Component: Laptops },
       {
         path: 'users',
         loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
-         Component: Users
+        Component: Users
       },
       {
         path: 'users2',
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'users/:userId',
-        loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         Component: UserDetails
       },
       {
@@ -47,26 +47,30 @@ const router = createBrowserRouter([
       },
       {
         path: 'posts/:postId',
-        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         Component: PostDetail
       }
     ]
   },
   {
-    path:'/about',
+    path: '/about',
     element: <div>About Me</div>
   },
   {
-    path:'/blogs',
+    path: '/blogs',
     element: <div>All my bologs are here</div>
   },
   {
-    path:'/app',
+    path: '/app',
     Component: App
   },
   {
-    path:'/app2',
+    path: '/app2',
     element: <App></App>
+  },
+  {
+    path: '*',
+    element: <h3>Not Found: 404 Status</h3>
   }
 ])
 
@@ -74,6 +78,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </StrictMode>,
 )
