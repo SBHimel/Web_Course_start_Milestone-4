@@ -1,5 +1,6 @@
 
 import './App.css'
+import Grandpa from './Component/ContextApi/GrandPa'
 import ControlField from './Component/ControlField/ControlField'
 import FormAction from './Component/FormAction/FormAction'
 import HookForm from './Component/HookForm/HookForm'
@@ -23,6 +24,8 @@ function App() {
       <HookForm></HookForm> */}
 
       <ProductManagement></ProductManagement>
+
+      <Grandpa></Grandpa>
     </>
   )
 }
