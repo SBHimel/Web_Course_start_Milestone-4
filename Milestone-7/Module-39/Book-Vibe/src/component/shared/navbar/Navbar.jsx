@@ -25,7 +25,7 @@ const Navbar = () => {
             } `
           }
         >
-          Books
+           Listed Books
         </NavLink>
       </li>
       <li>
