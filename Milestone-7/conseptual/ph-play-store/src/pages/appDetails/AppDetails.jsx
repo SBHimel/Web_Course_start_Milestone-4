@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router";
 import useApps from "../../hooks/useApps";
 import { HashLoader } from "react-spinners";
+import { InstalledAppsContext } from "../../context/InstalledAppsContext";
+import { toast } from "react-toastify";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -13,10 +15,12 @@ const AppDetails = () => {
   const expectedApp = apps.find((app) => String(app.id) === id);
   console.log(expectedApp, "expectedApp");
 
-  const [installedApps, setInstalledApps] = useState([])
+
+  const {installedApps, setInstalledApps} = useContext(InstalledAppsContext)
 
   const handleInstallApp = ()=>{
-    setInstalledApps([...installedApps, expectedApp])
+    setInstalledApps([...installedApps, expectedApp]);
+    toast.success(`${expectedApp.title} is installed`)
   }
   console.log(installedApps);
 
