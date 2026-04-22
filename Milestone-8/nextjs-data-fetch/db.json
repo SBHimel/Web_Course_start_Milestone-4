@@ -1,0 +1,111 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "price": 2500,
+      "category": "Electronics",
+      "brand": "Sony",
+      "stock": 15,
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1585386959984-a41552231693",
+      "description": "High quality wireless headphones with noise cancellation."
+    },
+    {
+      "id": 2,
+      "name": "Gaming Mouse",
+      "price": 1200,
+      "category": "Electronics",
+      "brand": "Logitech",
+      "stock": 30,
+      "rating": 4.3,
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7",
+      "description": "Ergonomic gaming mouse with RGB lighting."
+    },
+    {
+      "id": 3,
+      "name": "Running Shoes",
+      "price": 3200,
+      "category": "Fashion",
+      "brand": "Nike",
+      "stock": 20,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+      "description": "Comfortable running shoes for daily use."
+    },
+    {
+      "id": 4,
+      "name": "Smart Watch",
+      "price": 4500,
+      "category": "Electronics",
+      "brand": "Xiaomi",
+      "stock": 10,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+      "description": "Smart watch with fitness tracking and notifications."
+    },
+    {
+      "id": 5,
+      "name": "Backpack",
+      "price": 1800,
+      "category": "Accessories",
+      "brand": "Wildcraft",
+      "stock": 25,
+      "rating": 4.2,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+      "description": "Durable backpack for school and travel."
+    }
+  ],
+  "books": [
+  {
+    "id": 1,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "price": 450,
+    "category": "Self Development",
+    "rating": 4.8,
+    "image": "https://example.com/atomic-habits.jpg",
+    "description": "A guide to building good habits and breaking bad ones."
+  },
+  {
+    "id": 2,
+    "title": "Rich Dad Poor Dad",
+    "author": "Robert Kiyosaki",
+    "price": 400,
+    "category": "Finance",
+    "rating": 4.7,
+    "image": "https://example.com/rich-dad.jpg",
+    "description": "Teaches financial literacy and investing mindset."
+  },
+  {
+    "id": 3,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 350,
+    "category": "Novel",
+    "rating": 4.6,
+    "image": "https://example.com/alchemist.jpg",
+    "description": "A story about following your dreams."
+  },
+  {
+    "id": 4,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "price": 800,
+    "category": "Programming",
+    "rating": 4.9,
+    "image": "https://example.com/clean-code.jpg",
+    "description": "Best practices for writing clean and maintainable code."
+  },
+  {
+    "id": 5,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "price": 600,
+    "category": "Programming",
+    "rating": 4.8,
+    "image": "https://example.com/ydkjs.jpg",
+    "description": "Deep dive into JavaScript concepts."
+  }
+]
+}
