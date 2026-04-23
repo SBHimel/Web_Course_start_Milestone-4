@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Tailwind Basics",
+    "description": "Understand utility classes, spacing, colors, and layout system.",
+    "status": "completed",
+    "priority": "high",
+    "dueDate": "2026-04-25"
+  },
+  {
+    "id": 2,
+    "title": "Build Navbar with DaisyUI",
+    "description": "Create a responsive navbar using daisyUI components.",
+    "status": "in-progress",
+    "priority": "medium",
+    "dueDate": "2026-04-27"
+  },
+  {
+    "id": 3,
+    "title": "Explore HeroUI Components",
+    "description": "Install HeroUI and test buttons, cards, and modals.",
+    "status": "pending",
+    "priority": "high",
+    "dueDate": "2026-04-28"
+  },
+  {
+    "id": 4,
+    "title": "Create Task Manager UI",
+    "description": "Design a simple task manager UI using Tailwind or HeroUI.",
+    "status": "pending",
+    "priority": "high",
+    "dueDate": "2026-04-30"
+  },
+  {
+    "id": 5,
+    "title": "Practice Next.js Data Fetching",
+    "description": "Fetch data using SSR and display tasks dynamically.",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2026-05-02"
+  },
+  {
+    "id": 6,
+    "title": "Add Task Filtering Feature",
+    "description": "Filter tasks by status (completed, pending).",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2026-05-03"
+  },
+  {
+    "id": 7,
+    "title": "Deploy Project",
+    "description": "Deploy the app using Vercel.",
+    "status": "pending",
+    "priority": "low",
+    "dueDate": "2026-05-05"
+  }
+]
