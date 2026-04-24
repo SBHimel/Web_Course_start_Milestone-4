@@ -5,7 +5,10 @@
     "description": "Understand utility classes, spacing, colors, and layout system.",
     "status": "completed",
     "priority": "high",
-    "dueDate": "2026-04-25"
+    "dueDate": "2026-04-25",
+    "assignedTo": "Himel",
+    "tags": ["tailwind", "css", "basics"],
+    "createdAt": "2026-04-20"
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "description": "Create a responsive navbar using daisyUI components.",
     "status": "in-progress",
     "priority": "medium",
-    "dueDate": "2026-04-27"
+    "dueDate": "2026-04-27",
+    "assignedTo": "Himel",
+    "tags": ["daisyui", "navbar", "ui"],
+    "createdAt": "2026-04-21"
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "description": "Install HeroUI and test buttons, cards, and modals.",
     "status": "pending",
     "priority": "high",
-    "dueDate": "2026-04-28"
+    "dueDate": "2026-04-28",
+    "assignedTo": "Himel",
+    "tags": ["heroui", "components", "ui"],
+    "createdAt": "2026-04-22"
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "description": "Design a simple task manager UI using Tailwind or HeroUI.",
     "status": "pending",
     "priority": "high",
-    "dueDate": "2026-04-30"
+    "dueDate": "2026-04-30",
+    "assignedTo": "Himel",
+    "tags": ["project", "ui", "task-manager"],
+    "createdAt": "2026-04-23"
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "description": "Fetch data using SSR and display tasks dynamically.",
     "status": "pending",
     "priority": "medium",
-    "dueDate": "2026-05-02"
+    "dueDate": "2026-05-02",
+    "assignedTo": "Himel",
+    "tags": ["nextjs", "ssr", "fetch"],
+    "createdAt": "2026-04-24"
   },
   {
     "id": 6,
@@ -45,7 +60,10 @@
     "description": "Filter tasks by status (completed, pending).",
     "status": "pending",
     "priority": "medium",
-    "dueDate": "2026-05-03"
+    "dueDate": "2026-05-03",
+    "assignedTo": "Himel",
+    "tags": ["filter", "logic", "feature"],
+    "createdAt": "2026-04-24"
   },
   {
     "id": 7,
@@ -53,6 +71,9 @@
     "description": "Deploy the app using Vercel.",
     "status": "pending",
     "priority": "low",
-    "dueDate": "2026-05-05"
+    "dueDate": "2026-05-05",
+    "assignedTo": "Himel",
+    "tags": ["deployment", "vercel"],
+    "createdAt": "2026-04-24"
   }
 ]
