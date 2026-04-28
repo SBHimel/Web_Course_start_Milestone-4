@@ -109,5 +109,4 @@ const NewsDetailsPage = async ({ params }) => {
     );
 };
 
-
 export default NewsDetailsPage;
